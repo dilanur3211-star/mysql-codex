@@ -2,6 +2,8 @@ nemuin lokasi login page web
 
 SELECT option_name, option_value FROM wp_options WHERE option_name IN ('siteurl', 'home');      
 SELECT option_value FROM wp_options WHERE option_name = 'active_plugins'; 
+SHOW DATABASES; wajib sebelum show tables
+
 SHOW PROCESSLIST; IP dan aplikasi apa saja yang sedang terhubung ke database saat itu juga
 SHOW TABLES; ​Begitu diketik SHOW TABLES;, yang keluar bukan wp_users, melainkan tabel seperti: tb_admin, users_pabrik, atau tabel_karyawan.
 ​Artinya: Websitenya murni kustom.
