@@ -7,3 +7,14 @@ SHOW DATABASES; wajib sebelum show tables
 SHOW PROCESSLIST; IP dan aplikasi apa saja yang sedang terhubung ke database saat itu juga
 SHOW TABLES; ​Begitu diketik SHOW TABLES;, yang keluar bukan wp_users, melainkan tabel seperti: tb_admin, users_pabrik, atau tabel_karyawan.
 ​Artinya: Websitenya murni kustom.
+
+
+-- LANGKAH 1: (Ketik pas pertama login) Lihat dulu nama-nama database yang ada
+SHOW DATABASES;
+
+-- LANGKAH 2: Buka database milik website target (misal namanya: db_pabrik)
+USE db_pabrik;
+-- (Server bakal jawab: Database changed. Artinya lemarinya udah dibuka)
+
+-- LANGKAH 3: Nah, baru sekarang ketik perintah andalan kamu!
+SELECT * FROM setting;
