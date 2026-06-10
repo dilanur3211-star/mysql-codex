@@ -3,6 +3,11 @@ Websvr
 SET GLOBAL general_log = 'OFF';  (hapus history) 
 SET GLOBAL general_log = 'ON';      jangan lupa on
 SHOW DATABASES;
+USE hris_web;
+
+SHOW TABLES;
+
+SELECT * FROM tbl_users;
 
 exit, quit, atau pencet Ctrl + D  (WAJIB) 
 di cmd biasa sebelum login next scan history netstat -an  and arp -a
