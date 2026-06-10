@@ -1,3 +1,8 @@
+Test-NetConnection -ComputerName 10.60.71.10 -Port 3306
+
+
+
+
 yosourcedata.exe -h 10.60.71.10 -u root -P 3306 -p
 Websvr
 SET GLOBAL general_log = 'OFF';  (hapus history) 
